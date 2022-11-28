@@ -7,8 +7,8 @@ import java.time.LocalDateTime;
 
 @Data
 @Entity
-@Table(name = "devices")
-public class Device {
+@Table(name = "course")
+public class Course {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,7 +27,7 @@ public class Device {
     private LocalDateTime createTime;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "device_type", nullable = false)
-    private DeviceType deviceType;
+    @Column(name = "category", nullable = false)
+    private DeviceType category;
 
 }

@@ -21,12 +21,12 @@ public class Purchase {
     @JoinColumn(name = "user_id", referencedColumnName = "id", insertable = false, updatable = false) //FOREIGN KEY
     private User user;
 
-    @Column(name = "device_id", nullable = false)
-    private Long deviceId;
+    @Column(name = "course_id", nullable = false)
+    private Long courseId;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "device_id", referencedColumnName = "id", insertable = false, updatable = false)
-    private Device device;
+    @JoinColumn(name = "course_id", referencedColumnName = "id", insertable = false, updatable = false)
+    private Course course;
 
     @Column(name = "price", nullable = false)
     private Double price;
