@@ -25,7 +25,7 @@ public class Purchase {
     private Long deviceId;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "device_id", referencedColumnName = "id", insertable = false, updatable = false  )
+    @JoinColumn(name = "device_id", referencedColumnName = "id", insertable = false, updatable = false)
     private Device device;
 
     @Column(name = "price", nullable = false)

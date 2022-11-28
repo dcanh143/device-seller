@@ -22,7 +22,7 @@ public class UserServiceImpl implements UserService{
     @Override
     public User saveUser(User user) {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
-        user.setRole(Role.USER);
+        user.setRole(Role.valueOf(user.getRole().name()));
         user.setCreateTime(LocalDateTime.now());
 
         return userRepository.save(user);
