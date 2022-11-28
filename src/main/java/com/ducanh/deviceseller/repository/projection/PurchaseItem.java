@@ -8,6 +8,6 @@ public interface PurchaseItem {
     String getName();
     DeviceType getType();
     Double getPrice();
-    String getColor();
+    String getUserName();
     LocalDateTime getPurchaseTime();
 }
