@@ -15,6 +15,7 @@ jobs:
           POSTGRES_USER: admin
           POSTGRES_PASSWORD: "1234"
           POSTGRES_DB: db_course
+          POSTGRES_SCHEMA: sc_course
     # Add steps to the job
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
     steps:
