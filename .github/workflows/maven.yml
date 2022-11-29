@@ -18,6 +18,19 @@ jobs:
   build:
 
     runs-on: macos-11
+    services:
+      postgresql:
+        image: postgres
+
+        env:
+          POSTGRES_URL: ${DB_URL}
+          POSTGRES_USER: ${DB_USER}
+          POSTGRES_PASSWORD: ${DB_PASS}
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
 
     steps:
     - uses: actions/checkout@v3
