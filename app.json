@@ -1,5 +1,5 @@
 {
-  "name": "device-seller",
+  "name": "pocket-learn-backend",
   "buildpacks": [
     {
       "url": "heroku/java"
