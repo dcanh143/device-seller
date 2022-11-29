@@ -17,7 +17,7 @@ jobs:
       - image: cimg/postgres:14.0
         auth:
           username: admin
-          password: 1234  # context / project UI env-var reference
+          password: "1234"  # context / project UI env-var reference
         environment:
           POSTGRES_USER: admin
           POSTGRES_DB: db_course
