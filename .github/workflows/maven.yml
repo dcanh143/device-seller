@@ -23,9 +23,9 @@ jobs:
         image: postgres
 
         env:
-          POSTGRES_URL: ${DB_URL}
-          POSTGRES_USER: ${DB_USER}
-          POSTGRES_PASSWORD: ${DB_PASS}
+          POSTGRES_URL: jdbc:postgresql://ec2-52-1-17-228.compute-1.amazonaws.com:5432/d8r36ruvf3hi29
+          POSTGRES_USER: liatbbpfijyvzt
+          POSTGRES_PASSWORD: 70eeb7807d0a5b2a9284def9b8e8c5211aa0e4921e3f5e7b70276509ed56072e
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
