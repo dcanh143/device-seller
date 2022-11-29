@@ -9,8 +9,6 @@ jobs:
   build-and-test:
     docker:
       - image: cimg/openjdk:11.0
-        environment:
-          DATABASE_URL: postgresql://postgres@localhost/db_course?currentSchema=sc_course&ssl=false
 
       - image: cimg/postgres:14.0
         environment:
