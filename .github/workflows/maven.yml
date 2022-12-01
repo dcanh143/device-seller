@@ -17,13 +17,13 @@ on:
 jobs:
   build:
     runs-on: macos-11
-    services:
-      postgresql:
-        image: postgres
-        env:
-          POSTGRES_URL: jdbc:postgresql://ec2-52-1-17-228.compute-1.amazonaws.com:5432/d8r36ruvf3hi29
-          POSTGRES_USER: liatbbpfijyvzt
-          POSTGRES_PASSWORD: 70eeb7807d0a5b2a9284def9b8e8c5211aa0e4921e3f5e7b70276509ed56072e
+#    services:
+#      postgresql:
+#        image: postgres
+#        env:
+#          POSTGRES_URL: jdbc:postgresql://ec2-52-1-17-228.compute-1.amazonaws.com:5432/d8r36ruvf3hi29
+#          POSTGRES_USER: liatbbpfijyvzt
+#          POSTGRES_PASSWORD: 70eeb7807d0a5b2a9284def9b8e8c5211aa0e4921e3f5e7b70276509ed56072e
 
     steps:
     - uses: actions/checkout@v3
