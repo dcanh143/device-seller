@@ -16,7 +16,7 @@ on:
 
 jobs:
   build:
-    runs-on: macos-11
+    runs-on: ubuntu-latest
 #    services:
 #      postgresql:
 #        image: postgres
