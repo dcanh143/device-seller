@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.time.LocalDateTime;
+
 @RestController
 @RequestMapping("api/purchase")
 public class PurchaseController {
@@ -21,6 +23,7 @@ public class PurchaseController {
 
     @RequestMapping(value = "", method = RequestMethod.POST)
     public ResponseEntity<?> savePurchase(@RequestBody Purchase purchase) {
+        purchase.setPurchaseTime(LocalDateTime.now());
         return new ResponseEntity<>(purchaseService.savePurchase(purchase), HttpStatus.CREATED);
     }
 
