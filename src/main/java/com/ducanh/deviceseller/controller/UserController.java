@@ -26,9 +26,4 @@ public class UserController {
 
         return ResponseEntity.ok(true);
     }
-
-    @RequestMapping(value = "/{username}")
-    public ResponseEntity<?> getUser(@AuthenticationPrincipal UserPrincipal userPrincipal, @PathVariable("username") String username) {
-        return new ResponseEntity<>(userService.getUser(userPrincipal.getId()), HttpStatus.OK);
-    }
 }

@@ -12,5 +12,4 @@ public interface UserService {
 
     void changeRole(Role newRole, String username);
 
-    User getUser(Long id);
 }
