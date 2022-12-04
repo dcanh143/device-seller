@@ -4,8 +4,10 @@ import com.ducanh.deviceseller.model.Role;
 import com.ducanh.deviceseller.security.UserPrincipal;
 import com.ducanh.deviceseller.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.parameters.P;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -23,5 +25,10 @@ public class UserController {
         userService.changeRole(role, userPrincipal.getUsername());
 
         return ResponseEntity.ok(true);
+    }
+
+    @RequestMapping(value = "/{username}")
+    public ResponseEntity<?> getUser(@AuthenticationPrincipal UserPrincipal userPrincipal, @PathVariable("username") String username) {
+        return new ResponseEntity<>(userService.getUser(userPrincipal.getId()), HttpStatus.OK);
     }
 }
