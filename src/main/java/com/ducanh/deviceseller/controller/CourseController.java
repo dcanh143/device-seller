@@ -19,7 +19,7 @@ public class CourseController {
         return new ResponseEntity<>(courseService.saveCourse(course), HttpStatus.CREATED);
     }
 
-    @RequestMapping(value = "{courseId}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/{courseId}", method = RequestMethod.DELETE)
     public ResponseEntity<?> deleteCourse(@PathVariable Long courseId) {
         courseService.deleteCourse(courseId);
 
