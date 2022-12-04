@@ -31,7 +31,7 @@ public class UserServiceImpl implements UserService{
     @Override
     public Optional<User> findByUsername(String username) {
         return userRepository.findByUsername(username);
-    }   
+    }
 
     @Override
     @Transactional //Transactional is required when executing an update/delete query
